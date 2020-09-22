@@ -35,7 +35,9 @@ public class MessagesListener implements Listener {
             ProxiedPlayer player = ProxyServer.getInstance().getPlayer(playerName);
 
             if (player != null) {
-                player.chat(message);
+                /*player.chat(message); only for tests */
+                ProxyServer.getInstance().getPluginManager().dispatchCommand(player, message);
+
             }
 
         }
