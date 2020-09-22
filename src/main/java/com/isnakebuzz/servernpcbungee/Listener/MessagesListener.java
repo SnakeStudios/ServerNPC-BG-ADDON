@@ -13,6 +13,10 @@ public class MessagesListener implements Listener {
 
     private String channelName = "ServerNPC";
 
+    public MessagesListener() {
+        ProxyServer.getInstance().registerChannel(channelName);
+    }
+
     @SuppressWarnings("UnstableApiUsage")
     @EventHandler
     public void on(PluginMessageEvent event) {
