@@ -2,3 +2,4 @@ name: ServerNPC-Bungee
 version: ${project.version}
 main: com.isnakebuzz.servernpcbungee.SNPC
 description: Receive messages from ServerNPC in Spigot side and execute in BungeeCord.
+author: iSnakeBuzz_
