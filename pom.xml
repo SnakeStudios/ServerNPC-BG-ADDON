@@ -6,7 +6,7 @@
 
     <groupId>com.isnakebuzz</groupId>
     <artifactId>ServerNPC-Bungee</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>ServerNPC Bungee</name>

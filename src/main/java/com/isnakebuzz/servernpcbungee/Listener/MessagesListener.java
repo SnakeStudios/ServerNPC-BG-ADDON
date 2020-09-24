@@ -11,7 +11,7 @@ import net.md_5.bungee.event.EventHandler;
 
 public class MessagesListener implements Listener {
 
-    private String channelName = "ServerNPC";
+    private String channelName = "servernpc:main";
 
     public MessagesListener() {
         ProxyServer.getInstance().registerChannel(channelName);
