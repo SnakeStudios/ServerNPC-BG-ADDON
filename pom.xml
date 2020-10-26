@@ -6,7 +6,7 @@
 
     <groupId>com.isnakebuzz</groupId>
     <artifactId>ServerNPC-Bungee</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>ServerNPC Bungee</name>
@@ -18,7 +18,7 @@
     </properties>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <defaultGoal>clean package</defaultGoal>
         <plugins>
             <plugin>

@@ -29,18 +29,30 @@ public class MessagesListener implements Listener {
 
         if (subChannel.equalsIgnoreCase(SubChannel.COMMAND.getName())) {
 
+            boolean isConsole = isBool(in.readUTF());
             String playerName = in.readUTF();
             String message = in.readUTF();
 
             ProxiedPlayer player = ProxyServer.getInstance().getPlayer(playerName);
+            if (player == null) return;
 
-            if (player != null) {
-                /*player.chat(message); only for tests */
+            if (isConsole) {
+                ProxyServer.getInstance().getPluginManager().dispatchCommand(ProxyServer.getInstance().getConsole(), message.replaceAll("%player%", player.getName()));
+            } else {
                 ProxyServer.getInstance().getPluginManager().dispatchCommand(player, message);
-
             }
 
         }
+    }
 
+    private boolean isBool(String s) {
+        boolean bool;
+        try {
+            bool = Boolean.parseBoolean(s);
+        } catch (Exception ignored) {
+            bool = false;
+        }
+
+        return bool;
     }
 }
